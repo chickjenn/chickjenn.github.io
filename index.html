@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jenn ‚Äî a portfolio of a life</title>
+<title>Jenn — a portfolio of a life</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,7 @@
 <body>
 <div id="root"></div>
 
-<!-- ‚îÄ‚îÄ tweaks-panel ‚îÄ‚îÄ -->
+<!-- ── tweaks-panel ── -->
 <script type="text/babel">
 const __TWEAKS_STYLE = `
   .twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483646;width:280px;
@@ -216,7 +216,7 @@ function TweaksPanel({ title = 'Tweaks', children }) {
       <div ref={dragRef} className="twk-panel" style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
         <div className="twk-hd" onMouseDown={onDragStart}>
           <b>{title}</b>
-          <button className="twk-x" aria-label="Close tweaks" onMouseDown={(e) => e.stopPropagation()} onClick={dismiss}>‚úï</button>
+          <button className="twk-x" aria-label="Close tweaks" onMouseDown={(e) => e.stopPropagation()} onClick={dismiss}>✕</button>
         </div>
         <div className="twk-body">{children}</div>
       </div>
@@ -339,7 +339,7 @@ function TweakColor({ label, value, options, onChange }) {
           const on = key(o) === cur;
           return (
             <button key={i} type="button" className="twk-chip" role="radio" aria-checked={on} data-on={on ? '1' : '0'}
-              aria-label={colors.join(', ')} title={colors.join(' ¬∑ ')} style={{ background: hero }} onClick={() => onChange(o)}>
+              aria-label={colors.join(', ')} title={colors.join(' · ')} style={{ background: hero }} onClick={() => onChange(o)}>
               {sup.length > 0 && <span>{sup.map((c, j) => <i key={j} style={{ background: c }} />)}</span>}
               {on && <__TwkCheck light={__twkIsLight(hero)} />}
             </button>
@@ -353,7 +353,7 @@ function TweakColor({ label, value, options, onChange }) {
 Object.assign(window, { useTweaks, TweaksPanel, TweakSection, TweakRow, TweakSelect, TweakRadio, TweakColor });
 </script>
 
-<!-- ‚îÄ‚îÄ content ‚îÄ‚îÄ -->
+<!-- ── content ── -->
 <script type="text/babel">
 window.JENN = {
   name: "Jennifer Nie",
@@ -362,14 +362,14 @@ window.JENN = {
   city: "Chicago, IL",
   email: "nie.jennifer@gmail.com",
   linkedin: "linkedin.com/in/jennifernie",
-  tagline: "strategy & ops ¬∑ growth & marketing ¬∑ space ops on the side",
+  tagline: "strategy & ops · growth & marketing · space ops on the side",
   bio: "Hi, nice to meet you! I'm Jenn. Strategy & Ops, Chief of Staff at the Deep Space Initiative, and a perpetual learner who collects hobbies & skills the way other people collect mugs.",
   now: [
-    { label: "working on", value: "building bound ¬∑ my barista skills @ nimble" },
-    { label: "leading",    value: "internal ops @ Deep Space Initiative ¬∑ community @ Starthub" },
-    { label: "learning",   value: "deeper SQL ¬∑ claude code ¬∑ lana del rey on the accordion" },
-    { label: "playing",    value: "raddlequest ¬∑ banagrams ¬∑ minutecryptic ¬∑ cambio" },
-    { label: "listening",  value: "mars argo ¬∑ the strokes ¬∑ the marias" },
+    { label: "working on", value: "building bound · my barista skills @ nimble" },
+    { label: "leading",    value: "internal ops @ Deep Space Initiative · community @ Starthub" },
+    { label: "learning",   value: "deeper SQL · claude code · lana del rey on the accordion" },
+    { label: "playing",    value: "raddlequest · banagrams · minutecryptic · cambio" },
+    { label: "listening",  value: "mars argo · the strokes · the marias" },
   ],
   chapters: [
     {
@@ -389,13 +389,13 @@ window.JENN = {
       title: "Career & work",
       kicker: "the resume version, but warmer",
       items: [
-        { year: "2024 ‚Äî 26", h: "Strategy & Ops ¬∑ Pricing Supervisor ‚Äî McMaster-Carr",
+        { year: "2024 — 26", h: "Strategy & Ops · Pricing Supervisor — McMaster-Carr",
           body: "Scaled pricing decision velocity 27% in two months by designing an AI-assisted workflow across Product, Finance, and Sourcing. Drove $12M+ in incremental gross profit across 2,500+ monthly pricing decisions. Built and launched an AI-assisted decision product used by 16 operators, cutting review time by 5 minutes per workload. Mentored a team of 16 generalists." },
-        { year: "Aug ‚Äî Dec '24", h: "Rotational ¬∑ Cost Pricing Associate ‚Äî McMaster-Carr",
+        { year: "Aug — Dec '24", h: "Rotational · Cost Pricing Associate — McMaster-Carr",
           body: "Defined success metrics that lifted reporting clarity 30%. Cut data-extraction time 40% on $100M+ in annual savings by rewriting legacy reporting pipelines. Shipped a VBA automation that dropped operational errors by 90%." },
-        { year: "Summer '23", h: "Client Research Summer Associate ‚Äî AlphaSights",
+        { year: "Summer '23", h: "Client Research Summer Associate — AlphaSights",
           body: "Scoped ambiguous client problems, synthesized expert signals, and translated them into actionable recommendations. Got very good at the first sixty minutes of any new engagement." },
-        { year: "Jan ‚Äî May '22", h: "CMO ‚Äî Fleat (YC W22)",
+        { year: "Jan — May '22", h: "CMO — Fleat (YC W22)",
           body: "Drove 500+ app downloads by running growth experiments and iterating on engagement strategies. Helped a small founding team turn customer feedback into a roadmap." },
       ],
     },
@@ -404,10 +404,10 @@ window.JENN = {
       title: "Projects & leadership",
       kicker: "side quests",
       items: [
-        { year: "2025 ‚Äî now", h: "Chief of Staff ¬∑ The Deep Space Initiative",
+        { year: "2025 — now", h: "Chief of Staff · The Deep Space Initiative",
           body: "Owning internal operations and prioritization across a 50+ person distributed team. Aligning execution across fundraising and partnerships, translating ambiguous goals into structured plans, timelines, and decision frameworks." },
-        { year: "2024 ‚Äî 26", h: "AI-assisted pricing product",
-          body: "Designed adoption strategy, user workflows, and experimentation frameworks for an internal LLM-powered tool ‚Äî went from prototype to 16 daily users in months." },
+        { year: "2024 — 26", h: "AI-assisted pricing product",
+          body: "Designed adoption strategy, user workflows, and experimentation frameworks for an internal LLM-powered tool — went from prototype to 16 daily users in months." },
         { year: "ongoing", h: "Beatles cover series",
           body: "I'm working through the catalog one cover at a time. Currently somewhere on Rubber Soul. Ask me about it and I will not stop talking." },
         { year: "ongoing", h: "Cortado Index",
@@ -419,7 +419,7 @@ window.JENN = {
       title: "Education",
       kicker: "school + everything since",
       items: [
-        { year: "2020 ‚Äî 24", h: "B.A. Cognitive Science ‚Äî University of Southern California",
+        { year: "2020 — 24", h: "B.A. Cognitive Science — University of Southern California",
           body: "Minors in Organizational Leadership & Management and Health Care Studies. Cog sci taught me to think about systems made of people; the minors taught me to ship inside them." },
         { year: "ongoing", h: "Self-taught",
           body: "SQL, Python, VBA, prompt engineering, chess, Beatles fingerstyle, French, sourdough (failed), bookbinding (in progress)." },
@@ -428,37 +428,37 @@ window.JENN = {
     {
       key: "loves",
       title: "Things I love",
-      kicker: "board games ¬∑ books ¬∑ music ¬∑ tv shows",
+      kicker: "board games · books · music · tv shows",
       items: [
         { year: "books", h: "what I'm reading & rating",
-          body: "If a book has a sentence I want to write down, I keep it. Click to see the running list ‚Äî out of five.",
+          body: "If a book has a sentence I want to write down, I keep it. Click to see the running list — out of five.",
           list: [
-            { title: "Strange Pictures ‚Äî Uketsu",                          rating: 0, note: "currently reading." },
-            { title: "Butter: A Novel of Food and Murder ‚Äî Asako Yuzuki",  rating: 0, note: "currently reading." },
-            { title: "Remains of the Day ‚Äî Kazuo Ishiguro",                rating: 0, note: "currently reading." },
-            { title: "Never Let Me Go ‚Äî Kazuo Ishiguro",                   rating: 5, note: "holy plot twist." },
-            { title: "Martyr! ‚Äî Kaveh Akbar",                              rating: 5, note: "no notes, absolutely amazing." },
-            { title: "Sour Cherry ‚Äî Natalia Theodoridou",                  rating: 5, note: "the fastest i have ever finished a book." },
-            { title: "Klara and the Sun ‚Äî Ishiguro",                       rating: 4, note: "interesting in current time." },
-            { title: "The Three-Body Problem ‚Äî Liu Cixin",                  rating: 4, note: "my favorite sci-fi read." },
+            { title: "Strange Pictures — Uketsu",                          rating: 0, note: "currently reading." },
+            { title: "Butter: A Novel of Food and Murder — Asako Yuzuki",  rating: 0, note: "currently reading." },
+            { title: "Remains of the Day — Kazuo Ishiguro",                rating: 0, note: "currently reading." },
+            { title: "Never Let Me Go — Kazuo Ishiguro",                   rating: 5, note: "holy plot twist." },
+            { title: "Martyr! — Kaveh Akbar",                              rating: 5, note: "no notes, absolutely amazing." },
+            { title: "Sour Cherry — Natalia Theodoridou",                  rating: 5, note: "the fastest i have ever finished a book." },
+            { title: "Klara and the Sun — Ishiguro",                       rating: 4, note: "interesting in current time." },
+            { title: "The Three-Body Problem — Liu Cixin",                  rating: 4, note: "my favorite sci-fi read." },
           ],
         },
         { year: "music", h: "The Beatles, in slow motion",
           body: "Click for the cover log + everyday rotation.",
           list: [
-            { title: "Norwegian Wood ‚Äî cover #14",   rating: 4, note: "harder than it should have been. fingerstyle is humbling." },
-            { title: "Here Comes the Sun ‚Äî cover #11", rating: 5, note: "the one I'd play at a wedding." },
-            { title: "Blackbird ‚Äî cover #7",         rating: 5, note: "still my warmup." },
-            { title: "Sufjan ‚Äî Carrie & Lowell",     rating: 5, note: "rotation: rainy Sundays." },
-            { title: "Caroline Polachek ‚Äî Desire",   rating: 5, note: "rotation: walking to work." },
-            { title: "the Strokes ‚Äî Is This It",     rating: 4, note: "rotation: late spreadsheet nights." },
+            { title: "Norwegian Wood — cover #14",   rating: 4, note: "harder than it should have been. fingerstyle is humbling." },
+            { title: "Here Comes the Sun — cover #11", rating: 5, note: "the one I'd play at a wedding." },
+            { title: "Blackbird — cover #7",         rating: 5, note: "still my warmup." },
+            { title: "Sufjan — Carrie & Lowell",     rating: 5, note: "rotation: rainy Sundays." },
+            { title: "Caroline Polachek — Desire",   rating: 5, note: "rotation: walking to work." },
+            { title: "the Strokes — Is This It",     rating: 4, note: "rotation: late spreadsheet nights." },
           ],
         },
         { year: "listening", h: "Crime podcasts",
           body: "On every walk and most flights. Click for the current rotation.",
           list: [
-            { title: "Criminal ‚Äî Phoebe Judge",  rating: 5, note: "the tone-setter. quiet, careful, never lurid." },
-            { title: "In the Dark ‚Äî S2",         rating: 5, note: "the gold standard for investigative work." },
+            { title: "Criminal — Phoebe Judge",  rating: 5, note: "the tone-setter. quiet, careful, never lurid." },
+            { title: "In the Dark — S2",         rating: 5, note: "the gold standard for investigative work." },
             { title: "S-Town",                   rating: 4, note: "complicated; can't quite forget it." },
             { title: "Bear Brook",               rating: 4, note: "underrated, deeply reported." },
           ],
@@ -491,7 +491,7 @@ window.JENN = {
       items: [
         { year: "1", h: "Be a good guest", body: "In friendships, in companies, on this planet. Leave it cleaner than I found it." },
         { year: "2", h: "Curiosity over cleverness", body: "I'd rather ask the dumb question than score the rhetorical point. Cog sci has its uses." },
-        { year: "3", h: "Build things that survive me", body: "Even small things. Especially small things ‚Äî a workflow, a spreadsheet, a Beatles cover." },
+        { year: "3", h: "Build things that survive me", body: "Even small things. Especially small things — a workflow, a spreadsheet, a Beatles cover." },
         { year: "4", h: "Take the unglamorous job", body: "Pricing, ops, internal tooling. The work that nobody tweets about is usually the work that matters most." },
       ],
     },
@@ -510,7 +510,7 @@ window.NowDate = function NowDate() {
 };
 </script>
 
-<!-- ‚îÄ‚îÄ theme ‚îÄ‚îÄ -->
+<!-- ── theme ── -->
 <script type="text/babel">
 window.THEMES = {
   butter: {
@@ -612,7 +612,7 @@ window.bgTexture = function bgTexture(kind, baseColor, ink = '#2b2218') {
 };
 </script>
 
-<!-- ‚îÄ‚îÄ site ‚îÄ‚îÄ -->
+<!-- ── site ── -->
 <script type="text/babel">
 const { useEffect, useMemo, useRef, useState } = React;
 
@@ -686,7 +686,7 @@ function DiceButton({ theme, typeset, onJump, sections, size = 40, label = true 
         <rect x="2" y="2" width="20" height="20" rx="3" fill={theme.ink} stroke={theme.paper} strokeWidth="0.8" />
         {FACES[face].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={2.2} fill={theme.paper} />)}
       </svg>
-      {label && <span>{rolling ? "rolling‚Ä¶" : "roll"}</span>}
+      {label && <span>{rolling ? "rolling…" : "roll"}</span>}
     </button>
   );
 }
@@ -747,7 +747,7 @@ function SiteHeader({ theme, typeset, paletteKey, onPalette, onJump }) {
               )}
             </span>
             {paletteKey}
-            <span style={{ opacity: 0.5 }}>‚ñæ</span>
+            <span style={{ opacity: 0.5 }}>▾</span>
           </button>
           {openMenu &&
             <div style={{
@@ -803,7 +803,7 @@ function Hero({ theme, typeset, onJump }) {
           <div style={{
             fontFamily: typeset.mono, fontSize: 11, letterSpacing: 3,
             textTransform: "uppercase", color: theme.mute, marginBottom: 28
-          }}>A PORTFOLIO OF MY WORLD ¬∑ IN SIX CHAPTERS</div>
+          }}>A PORTFOLIO OF MY WORLD · IN SIX CHAPTERS</div>
 
           <h1 style={{
             fontFamily: typeset.display, fontSize: "clamp(56px, 9vw, 124px)",
@@ -825,7 +825,7 @@ function Hero({ theme, typeset, onJump }) {
             fontFamily: typeset.body, fontSize: "clamp(17px, 1.7vw, 21px)",
             lineHeight: 1.55, color: theme.ink, marginTop: 36, maxWidth: 560, opacity: 0.85
           }}>
-            {window.JENN.bio} This is a keepsake ‚Äî equal parts r√©sum√©,
+            {window.JENN.bio} This is a keepsake — equal parts résumé,
             scrapbook, and interest tracker. Click around. Sign the guestbook on your way out! :-)
           </p>
 
@@ -835,7 +835,7 @@ function Hero({ theme, typeset, onJump }) {
               fontFamily: typeset.mono, fontSize: 11, letterSpacing: 2,
               textTransform: "uppercase", textDecoration: "none",
               borderRadius: 2, whiteSpace: "nowrap"
-            }}>start the tour ‚Üí</a>
+            }}>start the tour →</a>
             <a href="#now" style={{
               padding: "12px 22px",
               border: `1.5px solid ${theme.ink}`, color: theme.ink,
@@ -875,9 +875,9 @@ function Hero({ theme, typeset, onJump }) {
       }}>
         {[
           ["based", "Chicago, IL"],
-          ["day job", "Building ¬∑ Bound"],
-          ["side gig", "Chief of Staff ¬∑ Deep Space Initiative"],
-          ["off-hours", "chess ¬∑ beatles covers ¬∑ space"],
+          ["day job", "Building · Bound"],
+          ["side gig", "Chief of Staff · Deep Space Initiative"],
+          ["off-hours", "chess · beatles covers · space"],
         ].map(([k, v]) =>
           <div key={k}>
             <div style={{ fontFamily: typeset.mono, fontSize: 9, letterSpacing: 2, textTransform: "uppercase", color: theme.mute, marginBottom: 4 }}>{k}</div>
@@ -983,7 +983,7 @@ function Stars({ value, theme }) {
   );
   return (
     <span style={{ letterSpacing: 1, fontSize: 13, color: theme.accent, lineHeight: 1 }} aria-label={`${value} of 5`}>
-      {"‚òÖ".repeat(value)}<span style={{ color: theme.edge }}>{"‚òÖ".repeat(5 - value)}</span>
+      {"★".repeat(value)}<span style={{ color: theme.edge }}>{"★".repeat(5 - value)}</span>
     </span>
   );
 }
@@ -1025,7 +1025,7 @@ function LovesSection({ chapter, idx, theme, typeset }) {
                     {!isOpen && <div style={{ fontFamily: typeset.body, fontSize: 14, color: theme.ink, opacity: 0.7, marginTop: 4 }}>{it.body}</div>}
                   </div>
                   <div style={{ fontFamily: typeset.mono, fontSize: 11, color: theme.mute, letterSpacing: 1.4, textTransform: "uppercase" }}>
-                    {it.list ? `${it.list.length} item${it.list.length !== 1 ? "s" : ""} ${isOpen ? "‚ñæ" : "‚ñ∏"}` : ""}
+                    {it.list ? `${it.list.length} item${it.list.length !== 1 ? "s" : ""} ${isOpen ? "▾" : "▸"}` : ""}
                   </div>
                 </button>
 
@@ -1076,7 +1076,7 @@ function NowSection({ theme, typeset }) {
           <h2 style={{ fontFamily: typeset.display, fontSize: 40, margin: "0 0 10px", color: theme.ink, fontWeight: 500, letterSpacing: -0.01 }}>Now</h2>
           <div style={{ fontFamily: typeset.handlike, fontSize: 22, color: theme.accent, marginBottom: 12 }}>updated as I live it</div>
           <div style={{ fontFamily: typeset.mono, fontSize: 11, color: theme.mute, letterSpacing: 1.4 }}>
-            <NowDate /> ¬∑ {time} CT
+            <NowDate /> · {time} CT
           </div>
         </div>
 
@@ -1141,7 +1141,7 @@ function GuestbookSection({ theme, typeset }) {
               padding: "8px 4px", fontFamily: typeset.body, fontSize: 16, color: theme.ink, outline: "none"
             }} />
             <textarea value={note} onChange={(e) => setNote(e.target.value)}
-              placeholder="say hi, leave a memory, drop a recommendation‚Ä¶" rows={3} style={{
+              placeholder="say hi, leave a memory, drop a recommendation…" rows={3} style={{
                 background: "transparent", border: "none", borderBottom: `1.5px solid ${theme.edge}`,
                 padding: "8px 4px", fontFamily: typeset.body, fontSize: 16, color: theme.ink, outline: "none", resize: "vertical"
               }} />
@@ -1150,7 +1150,7 @@ function GuestbookSection({ theme, typeset }) {
                 padding: "10px 20px", background: theme.ink, color: theme.paper,
                 border: "none", cursor: "pointer",
                 fontFamily: typeset.mono, fontSize: 11, letterSpacing: 2, textTransform: "uppercase"
-              }}>sign ‚Üí</button>
+              }}>sign →</button>
             </div>
           </form>
 
@@ -1168,7 +1168,7 @@ function GuestbookSection({ theme, typeset }) {
                   fontFamily: typeset.mono, fontSize: 10, letterSpacing: 1.4,
                   textTransform: "uppercase", color: theme.mute
                 }}>
-                  <span>‚Äî {e.from}</span><span>{e.when}</span>
+                  <span>— {e.from}</span><span>{e.when}</span>
                 </div>
               </div>
             )}
@@ -1188,7 +1188,7 @@ function SiteFooter({ theme, typeset }) {
     }}>
       <div>
         <div style={{ fontFamily: typeset.display, fontSize: 32, color: theme.ink, fontWeight: 500, letterSpacing: -0.02 }}>Thanks for stopping by.</div>
-        <div style={{ fontFamily: typeset.handlike, fontSize: 22, color: theme.accent, marginTop: 4 }}>‚Äî jenn</div>
+        <div style={{ fontFamily: typeset.handlike, fontSize: 22, color: theme.accent, marginTop: 4 }}>— jenn</div>
       </div>
       <div style={{
         fontFamily: typeset.mono, fontSize: 10, letterSpacing: 2,
@@ -1200,7 +1200,7 @@ function SiteFooter({ theme, typeset }) {
         <a href={`https://${window.JENN.linkedin}`} target="_blank" rel="noreferrer" style={{ color: theme.ink, textDecoration: "none", borderBottom: `1px solid ${theme.edge}` }}>
           {window.JENN.linkedin}
         </a><br />
-        <span style={{ opacity: 0.7 }}>built with care ¬∑ chicago</span>
+        <span style={{ opacity: 0.7 }}>built with care · chicago</span>
       </div>
     </footer>
   );
@@ -1235,7 +1235,7 @@ function Site({ theme, typeset, texture, paletteKey, onPalette }) {
 window.Site = Site;
 </script>
 
-<!-- ‚îÄ‚îÄ app bootstrap ‚îÄ‚îÄ -->
+<!-- ── app bootstrap ── -->
 <script type="text/babel">
 const TWEAK_DEFAULTS = { "palette": "fig", "type": "editorial", "texture": "paper" };
 
@@ -1271,1272 +1271,10 @@ function App() {
             label="Pairing"
             value={t.type}
             options={[
-              { value: 'editorial', label: 'Editorial ‚Äî Lora + Inter Tight' },
-              { value: 'hand',      label: 'Hand-drawn ‚Äî Caveat + Crimson' },
-              { value: 'archive',   label: 'Archive ‚Äî Special Elite + Fraunces' },
-              { value: 'modern',    label: 'Modern ‚Äî Instrument + JetBrains' },
-            ]}
-            onChange={(v) => setTweak('type', v)}
-          />
-        </TweakSection>
-        <TweakSection label="Background texture">
-          <TweakRadio
-            label="Paper"
-            value={t.texture}
-            options={['paper', 'grid', 'dot', 'plain']}
-            onChange={(v) => setTweak('texture', v)}
-          />
-        </TweakSection>
-      </TweaksPanel>
-    </>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-</script>
-</body>
-</html>
-      grid-template-columns: 80px minmax(0, 1fr) !important;
-      gap: 14px !important;
-    }
-    .site-nav {
-      display: none !important;
-    }
-  }
-</style>
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-</head>
-<body>
-<div id="root"></div>
-
-<!-- ‚îÄ‚îÄ tweaks-panel ‚îÄ‚îÄ -->
-<script type="text/babel">
-const __TWEAKS_STYLE = `
-  .twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483646;width:280px;
-    max-height:calc(100vh - 32px);display:flex;flex-direction:column;
-    transform:scale(var(--dc-inv-zoom,1));transform-origin:bottom right;
-    background:rgba(250,249,247,.78);color:#29261b;
-    -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
-    border:.5px solid rgba(255,255,255,.6);border-radius:14px;
-    box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 12px 40px rgba(0,0,0,.18);
-    font:11.5px/1.4 ui-sans-serif,system-ui,-apple-system,sans-serif;overflow:hidden}
-  .twk-hd{display:flex;align-items:center;justify-content:space-between;
-    padding:10px 8px 10px 14px;cursor:move;user-select:none}
-  .twk-hd b{font-size:12px;font-weight:600;letter-spacing:.01em}
-  .twk-x{appearance:none;border:0;background:transparent;color:rgba(41,38,27,.55);
-    width:22px;height:22px;border-radius:6px;cursor:default;font-size:13px;line-height:1}
-  .twk-x:hover{background:rgba(0,0,0,.06);color:#29261b}
-  .twk-body{padding:2px 14px 14px;display:flex;flex-direction:column;gap:10px;
-    overflow-y:auto;overflow-x:hidden;min-height:0;
-    scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.15) transparent}
-  .twk-body::-webkit-scrollbar{width:8px}
-  .twk-body::-webkit-scrollbar-track{background:transparent;margin:2px}
-  .twk-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:4px;
-    border:2px solid transparent;background-clip:content-box}
-  .twk-body::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.25);
-    border:2px solid transparent;background-clip:content-box}
-  .twk-row{display:flex;flex-direction:column;gap:5px}
-  .twk-row-h{flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
-  .twk-lbl{display:flex;justify-content:space-between;align-items:baseline;
-    color:rgba(41,38,27,.72)}
-  .twk-lbl>span:first-child{font-weight:500}
-  .twk-val{color:rgba(41,38,27,.5);font-variant-numeric:tabular-nums}
-  .twk-sect{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
-    color:rgba(41,38,27,.45);padding:10px 0 0}
-  .twk-sect:first-child{padding-top:0}
-  .twk-field{appearance:none;width:100%;height:26px;padding:0 8px;
-    border:.5px solid rgba(0,0,0,.1);border-radius:7px;
-    background:rgba(255,255,255,.6);color:inherit;font:inherit;outline:none}
-  .twk-field:focus{border-color:rgba(0,0,0,.25);background:rgba(255,255,255,.85)}
-  select.twk-field{padding-right:22px;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='rgba(0,0,0,.5)' d='M0 0h10L5 6z'/></svg>");
-    background-repeat:no-repeat;background-position:right 8px center}
-  .twk-slider{appearance:none;-webkit-appearance:none;width:100%;height:4px;margin:6px 0;
-    border-radius:999px;background:rgba(0,0,0,.12);outline:none}
-  .twk-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;
-    width:14px;height:14px;border-radius:50%;background:#fff;
-    border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
-  .twk-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;
-    background:#fff;border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
-  .twk-seg{position:relative;display:flex;padding:2px;border-radius:8px;
-    background:rgba(0,0,0,.06);user-select:none}
-  .twk-seg-thumb{position:absolute;top:2px;bottom:2px;border-radius:6px;
-    background:rgba(255,255,255,.9);box-shadow:0 1px 2px rgba(0,0,0,.12);
-    transition:left .15s cubic-bezier(.3,.7,.4,1),width .15s}
-  .twk-seg.dragging .twk-seg-thumb{transition:none}
-  .twk-seg button{appearance:none;position:relative;z-index:1;flex:1;border:0;
-    background:transparent;color:inherit;font:inherit;font-weight:500;min-height:22px;
-    border-radius:6px;cursor:default;padding:4px 6px;line-height:1.2;overflow-wrap:anywhere}
-  .twk-toggle{position:relative;width:32px;height:18px;border:0;border-radius:999px;
-    background:rgba(0,0,0,.15);transition:background .15s;cursor:default;padding:0}
-  .twk-toggle[data-on="1"]{background:#34c759}
-  .twk-toggle i{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;
-    background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
-  .twk-toggle[data-on="1"] i{transform:translateX(14px)}
-  .twk-chips{display:flex;gap:6px}
-  .twk-chip{position:relative;appearance:none;flex:1;min-width:0;height:46px;
-    padding:0;border:0;border-radius:6px;overflow:hidden;cursor:default;
-    box-shadow:0 0 0 .5px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.06);
-    transition:transform .12s cubic-bezier(.3,.7,.4,1),box-shadow .12s}
-  .twk-chip:hover{transform:translateY(-1px);
-    box-shadow:0 0 0 .5px rgba(0,0,0,.18),0 4px 10px rgba(0,0,0,.12)}
-  .twk-chip[data-on="1"]{box-shadow:0 0 0 1.5px rgba(0,0,0,.85),0 2px 6px rgba(0,0,0,.15)}
-  .twk-chip>span{position:absolute;top:0;bottom:0;right:0;width:34%;
-    display:flex;flex-direction:column;box-shadow:-1px 0 0 rgba(0,0,0,.1)}
-  .twk-chip>span>i{flex:1;box-shadow:0 -1px 0 rgba(0,0,0,.1)}
-  .twk-chip>span>i:first-child{box-shadow:none}
-  .twk-chip svg{position:absolute;top:6px;left:6px;width:13px;height:13px;
-    filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
-  .twk-swatch{appearance:none;-webkit-appearance:none;width:56px;height:22px;
-    border:.5px solid rgba(0,0,0,.1);border-radius:6px;padding:0;cursor:default;
-    background:transparent;flex-shrink:0}
-  .twk-swatch::-webkit-color-swatch-wrapper{padding:0}
-  .twk-swatch::-webkit-color-swatch{border:0;border-radius:5.5px}
-  .twk-swatch::-moz-color-swatch{border:0;border-radius:5.5px}
-`;
-
-function useTweaks(defaults) {
-  const [values, setValues] = React.useState(defaults);
-  const setTweak = React.useCallback((keyOrEdits, val) => {
-    const edits = typeof keyOrEdits === 'object' && keyOrEdits !== null
-      ? keyOrEdits : { [keyOrEdits]: val };
-    setValues((prev) => ({ ...prev, ...edits }));
-    window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*');
-    window.dispatchEvent(new CustomEvent('tweakchange', { detail: edits }));
-  }, []);
-  return [values, setTweak];
-}
-
-function TweaksPanel({ title = 'Tweaks', children }) {
-  const [open, setOpen] = React.useState(false);
-  const dragRef = React.useRef(null);
-  const offsetRef = React.useRef({ x: 16, y: 16 });
-  const PAD = 16;
-
-  const clampToViewport = React.useCallback(() => {
-    const panel = dragRef.current;
-    if (!panel) return;
-    const w = panel.offsetWidth, h = panel.offsetHeight;
-    const maxRight = Math.max(PAD, window.innerWidth - w - PAD);
-    const maxBottom = Math.max(PAD, window.innerHeight - h - PAD);
-    offsetRef.current = {
-      x: Math.min(maxRight, Math.max(PAD, offsetRef.current.x)),
-      y: Math.min(maxBottom, Math.max(PAD, offsetRef.current.y)),
-    };
-    panel.style.right = offsetRef.current.x + 'px';
-    panel.style.bottom = offsetRef.current.y + 'px';
-  }, []);
-
-  React.useEffect(() => {
-    if (!open) return;
-    clampToViewport();
-    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(clampToViewport) : null;
-    if (ro) ro.observe(document.documentElement);
-    else window.addEventListener('resize', clampToViewport);
-    return () => { if (ro) ro.disconnect(); else window.removeEventListener('resize', clampToViewport); };
-  }, [open, clampToViewport]);
-
-  React.useEffect(() => {
-    const onMsg = (e) => {
-      const t = e?.data?.type;
-      if (t === '__activate_edit_mode') setOpen(true);
-      else if (t === '__deactivate_edit_mode') setOpen(false);
-    };
-    window.addEventListener('message', onMsg);
-    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
-    return () => window.removeEventListener('message', onMsg);
-  }, []);
-
-  const dismiss = () => {
-    setOpen(false);
-    window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
-  };
-
-  const onDragStart = (e) => {
-    const panel = dragRef.current;
-    if (!panel) return;
-    const r = panel.getBoundingClientRect();
-    const sx = e.clientX, sy = e.clientY;
-    const startRight = window.innerWidth - r.right;
-    const startBottom = window.innerHeight - r.bottom;
-    const move = (ev) => {
-      offsetRef.current = { x: startRight - (ev.clientX - sx), y: startBottom - (ev.clientY - sy) };
-      clampToViewport();
-    };
-    const up = () => { window.removeEventListener('mousemove', move); window.removeEventListener('mouseup', up); };
-    window.addEventListener('mousemove', move);
-    window.addEventListener('mouseup', up);
-  };
-
-  if (!open) return null;
-  return (
-    <>
-      <style>{__TWEAKS_STYLE}</style>
-      <div ref={dragRef} className="twk-panel" style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
-        <div className="twk-hd" onMouseDown={onDragStart}>
-          <b>{title}</b>
-          <button className="twk-x" aria-label="Close tweaks" onMouseDown={(e) => e.stopPropagation()} onClick={dismiss}>‚úï</button>
-        </div>
-        <div className="twk-body">{children}</div>
-      </div>
-    </>
-  );
-}
-
-function TweakSection({ label, children }) {
-  return <><div className="twk-sect">{label}</div>{children}</>;
-}
-
-function TweakRow({ label, value, children, inline = false }) {
-  return (
-    <div className={inline ? 'twk-row twk-row-h' : 'twk-row'}>
-      <div className="twk-lbl">
-        <span>{label}</span>
-        {value != null && <span className="twk-val">{value}</span>}
-      </div>
-      {children}
-    </div>
-  );
-}
-
-function TweakSelect({ label, value, options, onChange }) {
-  return (
-    <TweakRow label={label}>
-      <select className="twk-field" value={value} onChange={(e) => onChange(e.target.value)}>
-        {options.map((o) => {
-          const v = typeof o === 'object' ? o.value : o;
-          const l = typeof o === 'object' ? o.label : o;
-          return <option key={v} value={v}>{l}</option>;
-        })}
-      </select>
-    </TweakRow>
-  );
-}
-
-function TweakRadio({ label, value, options, onChange }) {
-  const trackRef = React.useRef(null);
-  const [dragging, setDragging] = React.useState(false);
-  const valueRef = React.useRef(value);
-  valueRef.current = value;
-
-  const labelLen = (o) => String(typeof o === 'object' ? o.label : o).length;
-  const maxLen = options.reduce((m, o) => Math.max(m, labelLen(o)), 0);
-  const fitsAsSegments = maxLen <= ({ 2: 16, 3: 10 }[options.length] ?? 0);
-
-  if (!fitsAsSegments) {
-    const resolve = (s) => {
-      const m = options.find((o) => String(typeof o === 'object' ? o.value : o) === s);
-      return m === undefined ? s : typeof m === 'object' ? m.value : m;
-    };
-    return <TweakSelect label={label} value={value} options={options} onChange={(s) => onChange(resolve(s))} />;
-  }
-
-  const opts = options.map((o) => (typeof o === 'object' ? o : { value: o, label: o }));
-  const idx = Math.max(0, opts.findIndex((o) => o.value === value));
-  const n = opts.length;
-
-  const segAt = (clientX) => {
-    const r = trackRef.current.getBoundingClientRect();
-    const inner = r.width - 4;
-    const i = Math.floor(((clientX - r.left - 2) / inner) * n);
-    return opts[Math.max(0, Math.min(n - 1, i))].value;
-  };
-
-  const onPointerDown = (e) => {
-    setDragging(true);
-    const v0 = segAt(e.clientX);
-    if (v0 !== valueRef.current) onChange(v0);
-    const move = (ev) => { if (!trackRef.current) return; const v = segAt(ev.clientX); if (v !== valueRef.current) onChange(v); };
-    const up = () => { setDragging(false); window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); };
-    window.addEventListener('pointermove', move);
-    window.addEventListener('pointerup', up);
-  };
-
-  return (
-    <TweakRow label={label}>
-      <div ref={trackRef} role="radiogroup" onPointerDown={onPointerDown} className={dragging ? 'twk-seg dragging' : 'twk-seg'}>
-        <div className="twk-seg-thumb" style={{ left: `calc(2px + ${idx} * (100% - 4px) / ${n})`, width: `calc((100% - 4px) / ${n})` }} />
-        {opts.map((o) => <button key={o.value} type="button" role="radio" aria-checked={o.value === value}>{o.label}</button>)}
-      </div>
-    </TweakRow>
-  );
-}
-
-function __twkIsLight(hex) {
-  const h = String(hex).replace('#', '');
-  const x = h.length === 3 ? h.replace(/./g, (c) => c + c) : h.padEnd(6, '0');
-  const n = parseInt(x.slice(0, 6), 16);
-  if (Number.isNaN(n)) return true;
-  const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
-  return r * 299 + g * 587 + b * 114 > 148000;
-}
-
-const __TwkCheck = ({ light }) => (
-  <svg viewBox="0 0 14 14" aria-hidden="true">
-    <path d="M3 7.2 5.8 10 11 4.2" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" stroke={light ? 'rgba(0,0,0,.78)' : '#fff'} />
-  </svg>
-);
-
-function TweakColor({ label, value, options, onChange }) {
-  if (!options || !options.length) {
-    return (
-      <div className="twk-row twk-row-h">
-        <div className="twk-lbl"><span>{label}</span></div>
-        <input type="color" className="twk-swatch" value={value} onChange={(e) => onChange(e.target.value)} />
-      </div>
-    );
-  }
-  const key = (o) => String(JSON.stringify(o)).toLowerCase();
-  const cur = key(value);
-  return (
-    <TweakRow label={label}>
-      <div className="twk-chips" role="radiogroup">
-        {options.map((o, i) => {
-          const colors = Array.isArray(o) ? o : [o];
-          const [hero, ...rest] = colors;
-          const sup = rest.slice(0, 4);
-          const on = key(o) === cur;
-          return (
-            <button key={i} type="button" className="twk-chip" role="radio" aria-checked={on} data-on={on ? '1' : '0'}
-              aria-label={colors.join(', ')} title={colors.join(' ¬∑ ')} style={{ background: hero }} onClick={() => onChange(o)}>
-              {sup.length > 0 && <span>{sup.map((c, j) => <i key={j} style={{ background: c }} />)}</span>}
-              {on && <__TwkCheck light={__twkIsLight(hero)} />}
-            </button>
-          );
-        })}
-      </div>
-    </TweakRow>
-  );
-}
-
-Object.assign(window, { useTweaks, TweaksPanel, TweakSection, TweakRow, TweakSelect, TweakRadio, TweakColor });
-</script>
-
-<!-- ‚îÄ‚îÄ content ‚îÄ‚îÄ -->
-<script type="text/babel">
-window.JENN = {
-  name: "Jennifer Nie",
-  shortName: "Jenn",
-  age: 23,
-  city: "Chicago, IL",
-  email: "nie.jennifer@gmail.com",
-  linkedin: "linkedin.com/in/jennifernie",
-  tagline: "strategy & ops ¬∑ growth & marketing ¬∑ space ops on the side",
-  bio: "Hi, nice to meet you! I'm Jenn. Strategy & Ops, Chief of Staff at the Deep Space Initiative, and a perpetual learner who collects hobbies & skills the way other people collect mugs.",
-  now: [
-    { label: "working on", value: "building bound ¬∑ my barista skills @ nimble" },
-    { label: "leading",    value: "internal ops @ Deep Space Initiative ¬∑ community @ Starthub" },
-    { label: "learning",   value: "deeper SQL ¬∑ claude code ¬∑ lana del rey on the accordion" },
-    { label: "playing",    value: "raddlequest ¬∑ banagrams ¬∑ minutecryptic ¬∑ cambio" },
-    { label: "listening",  value: "mars argo ¬∑ the strokes ¬∑ the marias" },
-  ],
-  chapters: [
-    {
-      key: "moments",
-      title: "Defining moments",
-      kicker: "the small pivots",
-      items: [
-        { year: "2022", h: "the summer i worked at a medspa", body: "started as a medical assistant, ended as the head of marketing." },
-        { year: "2023", h: "the semester i joined doz", body: "Eight weeks of scoping ambiguous client problems for total strangers. Learned to love the messy first hour of any project." },
-        { year: "2024", h: "Joined McMaster", body: "Picked the unglamorous, deeply-respected industrial supply company over flashier offers. Best career decision so far." },
-        { year: "2025", h: "Promoted to supervisor", body: "Went from rotational associate to running a pricing team in 3 months. Suddenly, I was the person other people brought their hard problems to." },
-        { year: "2025", h: "Deep Space Initiative", body: "Became Chief of Staff for a 50-person space non-profit. The kid who looked up at Saturn's rings is still inside, very smug." },
-      ],
-    },
-    {
-      key: "career",
-      title: "Career & work",
-      kicker: "the resume version, but warmer",
-      items: [
-        { year: "2024 ‚Äî 26", h: "Strategy & Ops ¬∑ Pricing Supervisor ‚Äî McMaster-Carr",
-          body: "Scaled pricing decision velocity 27% in two months by designing an AI-assisted workflow across Product, Finance, and Sourcing. Drove $12M+ in incremental gross profit across 2,500+ monthly pricing decisions. Built and launched an AI-assisted decision product used by 16 operators, cutting review time by 5 minutes per workload. Mentored a team of 16 generalists." },
-        { year: "Aug ‚Äî Dec '24", h: "Rotational ¬∑ Cost Pricing Associate ‚Äî McMaster-Carr",
-          body: "Defined success metrics that lifted reporting clarity 30%. Cut data-extraction time 40% on $100M+ in annual savings by rewriting legacy reporting pipelines. Shipped a VBA automation that dropped operational errors by 90%." },
-        { year: "Summer '23", h: "Client Research Summer Associate ‚Äî AlphaSights",
-          body: "Scoped ambiguous client problems, synthesized expert signals, and translated them into actionable recommendations. Got very good at the first sixty minutes of any new engagement." },
-        { year: "Jan ‚Äî May '22", h: "CMO ‚Äî Fleat (YC W22)",
-          body: "Drove 500+ app downloads by running growth experiments and iterating on engagement strategies. Helped a small founding team turn customer feedback into a roadmap." },
-      ],
-    },
-    {
-      key: "projects",
-      title: "Projects & leadership",
-      kicker: "side quests",
-      items: [
-        { year: "2025 ‚Äî now", h: "Chief of Staff ¬∑ The Deep Space Initiative",
-          body: "Owning internal operations and prioritization across a 50+ person distributed team. Aligning execution across fundraising and partnerships, translating ambiguous goals into structured plans, timelines, and decision frameworks." },
-        { year: "2024 ‚Äî 26", h: "AI-assisted pricing product",
-          body: "Designed adoption strategy, user workflows, and experimentation frameworks for an internal LLM-powered tool ‚Äî went from prototype to 16 daily users in months." },
-        { year: "ongoing", h: "Beatles cover series",
-          body: "I'm working through the catalog one cover at a time. Currently somewhere on Rubber Soul. Ask me about it and I will not stop talking." },
-        { year: "ongoing", h: "Cortado Index",
-          body: "A spreadsheet ranking every cortado in Chicago on five axes. Yes I am like this. Sawada is currently #1." },
-      ],
-    },
-    {
-      key: "education",
-      title: "Education",
-      kicker: "school + everything since",
-      items: [
-        { year: "2020 ‚Äî 24", h: "B.A. Cognitive Science ‚Äî University of Southern California",
-          body: "Minors in Organizational Leadership & Management and Health Care Studies. Cog sci taught me to think about systems made of people; the minors taught me to ship inside them." },
-        { year: "ongoing", h: "Self-taught",
-          body: "SQL, Python, VBA, prompt engineering, chess, Beatles fingerstyle, French, sourdough (failed), bookbinding (in progress)." },
-      ],
-    },
-    {
-      key: "loves",
-      title: "Things I love",
-      kicker: "board games ¬∑ books ¬∑ music ¬∑ tv shows",
-      items: [
-        { year: "books", h: "what I'm reading & rating",
-          body: "If a book has a sentence I want to write down, I keep it. Click to see the running list ‚Äî out of five.",
-          list: [
-            { title: "Strange Pictures ‚Äî Uketsu",                          rating: 0, note: "currently reading." },
-            { title: "Butter: A Novel of Food and Murder ‚Äî Asako Yuzuki",  rating: 0, note: "currently reading." },
-            { title: "Remains of the Day ‚Äî Kazuo Ishiguro",                rating: 0, note: "currently reading." },
-            { title: "Never Let Me Go ‚Äî Kazuo Ishiguro",                   rating: 5, note: "holy plot twist." },
-            { title: "Martyr! ‚Äî Kaveh Akbar",                              rating: 5, note: "no notes, absolutely amazing." },
-            { title: "Sour Cherry ‚Äî Natalia Theodoridou",                  rating: 5, note: "the fastest i have ever finished a book." },
-            { title: "Klara and the Sun ‚Äî Ishiguro",                       rating: 4, note: "interesting in current time." },
-            { title: "The Three-Body Problem ‚Äî Liu Cixin",                  rating: 4, note: "my favorite sci-fi read." },
-          ],
-        },
-        { year: "music", h: "The Beatles, in slow motion",
-          body: "Click for the cover log + everyday rotation.",
-          list: [
-            { title: "Norwegian Wood ‚Äî cover #14",   rating: 4, note: "harder than it should have been. fingerstyle is humbling." },
-            { title: "Here Comes the Sun ‚Äî cover #11", rating: 5, note: "the one I'd play at a wedding." },
-            { title: "Blackbird ‚Äî cover #7",         rating: 5, note: "still my warmup." },
-            { title: "Sufjan ‚Äî Carrie & Lowell",     rating: 5, note: "rotation: rainy Sundays." },
-            { title: "Caroline Polachek ‚Äî Desire",   rating: 5, note: "rotation: walking to work." },
-            { title: "the Strokes ‚Äî Is This It",     rating: 4, note: "rotation: late spreadsheet nights." },
-          ],
-        },
-        { year: "listening", h: "Crime podcasts",
-          body: "On every walk and most flights. Click for the current rotation.",
-          list: [
-            { title: "Criminal ‚Äî Phoebe Judge",  rating: 5, note: "the tone-setter. quiet, careful, never lurid." },
-            { title: "In the Dark ‚Äî S2",         rating: 5, note: "the gold standard for investigative work." },
-            { title: "S-Town",                   rating: 4, note: "complicated; can't quite forget it." },
-            { title: "Bear Brook",               rating: 4, note: "underrated, deeply reported." },
-          ],
-        },
-        { year: "play", h: "board games & puzzles",
-          body: "Chess for the daily puzzle, board games for the friends-over evenings. Click for the play log.",
-          list: [
-            { title: "Raddle Quest",      rating: 5, note: "learn something new everyday, not hard but still stimulating." },
-            { title: "NYT Crossword",     rating: 4, note: "i hate turning on autocheck but sometimes it must be done." },
-            { title: "Banagrams",         rating: 5, note: "i think i play banagrams everyday." },
-            { title: "Avalon",            rating: 5, note: "my favorite board game of all time." },
-            { title: "Cambio",            rating: 3, note: "started here. won't be the last stop." },
-          ],
-        },
-        { year: "objects", h: "Things that feel like they remember you",
-          body: "Small artifacts I'd grab in a fire. Click for the list.",
-          list: [
-            { title: "Field Notes notebooks",  rating: 5, note: "one in my bag at all times. dot-grid only." },
-            { title: "A tiny brass orrery",    rating: 5, note: "from a London market. sits on my desk." },
-            { title: "My chess set",           rating: 5, note: "wooden, weighted, slightly battered. has seen things." },
-            { title: "A 1985 Pentax K1000",    rating: 4, note: "my dad's. I shoot one roll a month." },
-          ],
-        },
-      ],
-    },
-    {
-      key: "values",
-      title: "current philosophies",
-      kicker: "what I'm trying to do here",
-      items: [
-        { year: "1", h: "Be a good guest", body: "In friendships, in companies, on this planet. Leave it cleaner than I found it." },
-        { year: "2", h: "Curiosity over cleverness", body: "I'd rather ask the dumb question than score the rhetorical point. Cog sci has its uses." },
-        { year: "3", h: "Build things that survive me", body: "Even small things. Especially small things ‚Äî a workflow, a spreadsheet, a Beatles cover." },
-        { year: "4", h: "Take the unglamorous job", body: "Pricing, ops, internal tooling. The work that nobody tweets about is usually the work that matters most." },
-      ],
-    },
-  ],
-  guestbook: [
-    { from: "M.", note: "you taught me how to host a dinner. i still set the napkins your way.", when: "Apr '26" },
-    { from: "Dad", note: "saw saturn last night, thought of you.", when: "Mar '26" },
-    { from: "L.", note: "your cortado spreadsheet ruined coffee for me. thank you.", when: "Feb '26" },
-    { from: "R.", note: "still thinking about that pricing memo. you were right.", when: "Jan '26" },
-  ],
-};
-
-window.NowDate = function NowDate() {
-  const d = new Date();
-  return d.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
-};
-</script>
-
-<!-- ‚îÄ‚îÄ theme ‚îÄ‚îÄ -->
-<script type="text/babel">
-window.THEMES = {
-  butter: {
-    name: "butter", bg: "#f3ead0", paper: "#fbf4dc", paperDeep: "#e8dcb6",
-    ink: "#2a2418", mute: "#8a7a58", accent: "#c25a2e", accent2: "#5e7a4a",
-    tape: "#e8dcb6", edge: "rgba(42,36,24,0.13)",
-    swatch: ["#c25a2e", "#fbf4dc", "#5e7a4a", "#e8dcb6"],
-  },
-  persimmon: {
-    name: "persimmon", bg: "#f4e4c8", paper: "#fcf2d8", paperDeep: "#e6cfa0",
-    ink: "#3a1e10", mute: "#8a5a3a", accent: "#d2522a", accent2: "#6a4a2a",
-    tape: "#e6cfa0", edge: "rgba(58,30,16,0.14)",
-    swatch: ["#d2522a", "#fcf2d8", "#6a4a2a", "#e6cfa0"],
-  },
-  moss: {
-    name: "moss", bg: "#e6e0c8", paper: "#f4eed4", paperDeep: "#cfc8a8",
-    ink: "#23301f", mute: "#6a755a", accent: "#c08a2a", accent2: "#9a5a3a",
-    tape: "#cfc8a8", edge: "rgba(35,48,31,0.13)",
-    swatch: ["#23301f", "#f4eed4", "#c08a2a", "#9a5a3a"],
-  },
-  blush: {
-    name: "blush", bg: "#f4e0d4", paper: "#fbede2", paperDeep: "#e6cab8",
-    ink: "#3a1a22", mute: "#9a6068", accent: "#a8344a", accent2: "#7a8e6a",
-    tape: "#e6cab8", edge: "rgba(58,26,34,0.12)",
-    swatch: ["#a8344a", "#fbede2", "#7a8e6a", "#e6cab8"],
-  },
-  harbor: {
-    name: "harbor", bg: "#ece4d0", paper: "#f8f1dc", paperDeep: "#d8cdb0",
-    ink: "#1c2a3a", mute: "#6a7a8a", accent: "#b85838", accent2: "#3a5a72",
-    tape: "#d8cdb0", edge: "rgba(28,42,58,0.13)",
-    swatch: ["#1c2a3a", "#f8f1dc", "#b85838", "#d8cdb0"],
-  },
-  fig: {
-    name: "fig", bg: "#eddfd2", paper: "#f8ece0", paperDeep: "#d8c0a8",
-    ink: "#3a223a", mute: "#8a6878", accent: "#9a4a5a", accent2: "#c89a78",
-    tape: "#d8c0a8", edge: "rgba(58,34,58,0.12)",
-    swatch: ["#9a4a5a", "#f8ece0", "#c89a78", "#3a223a"],
-  },
-  mandarin: {
-    name: "mandarin", bg: "#f6e2c4", paper: "#fdf1d6", paperDeep: "#ead0a0",
-    ink: "#2a1830", mute: "#8a6a5a", accent: "#e0682a", accent2: "#5a3a78",
-    tape: "#ead0a0", edge: "rgba(42,24,48,0.13)",
-    swatch: ["#e0682a", "#fdf1d6", "#5a3a78", "#ead0a0"],
-  },
-  maple: {
-    name: "maple", bg: "#ebe1c8", paper: "#f6edd2", paperDeep: "#d8c8a0",
-    ink: "#3a2418", mute: "#8a6a4a", accent: "#a84522", accent2: "#3a7a78",
-    tape: "#d8c8a0", edge: "rgba(58,36,24,0.14)",
-    swatch: ["#a84522", "#f6edd2", "#3a7a78", "#d8c8a0"],
-  },
-};
-
-window.TYPESETS = {
-  editorial: {
-    display: '"Lora", Georgia, serif',
-    body: '"Inter Tight", system-ui, sans-serif',
-    mono: '"JetBrains Mono", monospace',
-    handlike: '"Caveat", cursive',
-    italic: true,
-  },
-  hand: {
-    display: '"Caveat", cursive',
-    body: '"Crimson Pro", Georgia, serif',
-    mono: '"JetBrains Mono", monospace',
-    handlike: '"Caveat", cursive',
-    italic: true,
-  },
-  archive: {
-    display: '"Fraunces", serif',
-    body: '"Special Elite", "Courier New", monospace',
-    mono: '"Special Elite", monospace',
-    handlike: '"Caveat", cursive',
-    italic: false,
-  },
-  modern: {
-    display: '"Instrument Serif", Georgia, serif',
-    body: '"Inter Tight", system-ui, sans-serif',
-    mono: '"JetBrains Mono", monospace',
-    handlike: '"Caveat", cursive',
-    italic: true,
-  },
-};
-
-window.bgTexture = function bgTexture(kind, baseColor, ink = '#2b2218') {
-  const ic = encodeURIComponent(ink);
-  if (kind === 'paper') {
-    const noise = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3' /%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`;
-    return { background: `${noise}, radial-gradient(1200px 800px at 30% 0%, rgba(255,255,255,0.5), rgba(255,255,255,0) 60%), ${baseColor}` };
-  }
-  if (kind === 'grid') {
-    const grid = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath d='M32 0H0v32' fill='none' stroke='${ic}' stroke-opacity='0.08' stroke-width='1'/%3E%3C/svg%3E")`;
-    return { background: `${grid}, ${baseColor}`, backgroundSize: '32px 32px, auto' };
-  }
-  if (kind === 'dot') {
-    const dot = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='2' cy='2' r='1' fill='${ic}' fill-opacity='0.18'/%3E%3C/svg%3E")`;
-    return { background: `${dot}, ${baseColor}`, backgroundSize: '20px 20px, auto' };
-  }
-  return { background: baseColor };
-};
-</script>
-
-<!-- ‚îÄ‚îÄ site ‚îÄ‚îÄ -->
-<script type="text/babel">
-const { useEffect, useMemo, useRef, useState } = React;
-
-function Tape({ theme, rotate = -3, top = -10, left = 24, width = 80 }) {
-  return (
-    <div style={{
-      position: "absolute", top, left, width, height: 22,
-      background: theme.tape,
-      boxShadow: "0 1px 2px rgba(0,0,0,0.08)",
-      transform: `rotate(${rotate}deg)`,
-      opacity: 0.9, pointerEvents: "none"
-    }} />
-  );
-}
-
-function Stamp({ theme, typeset, label, rotate = -8, style }) {
-  return (
-    <div style={{
-      display: "inline-block", padding: "5px 12px",
-      border: `2px solid ${theme.accent}`,
-      color: theme.accent, fontFamily: typeset.mono,
-      fontSize: 10, letterSpacing: 2.4, textTransform: "uppercase",
-      transform: `rotate(${rotate}deg)`,
-      borderRadius: 2, ...style
-    }}>{label}</div>
-  );
-}
-
-function DiceButton({ theme, typeset, onJump, sections, size = 40, label = true }) {
-  const [rolling, setRolling] = useState(false);
-  const [face, setFace] = useState(1);
-
-  function roll() {
-    if (rolling) return;
-    setRolling(true);
-    const start = Date.now();
-    const tick = () => {
-      const t = Date.now() - start;
-      setFace(1 + Math.floor(Math.random() * 6));
-      if (t < 900) {
-        setTimeout(tick, 70 + t / 12);
-      } else {
-        const pick = sections[Math.floor(Math.random() * sections.length)];
-        setFace(1 + sections.indexOf(pick) % 6);
-        setTimeout(() => { setRolling(false); onJump(pick); }, 220);
-      }
-    };
-    tick();
-  }
-
-  const FACES = {
-    1: [[12, 12]],
-    2: [[7, 7], [17, 17]],
-    3: [[7, 7], [12, 12], [17, 17]],
-    4: [[7, 7], [17, 7], [7, 17], [17, 17]],
-    5: [[7, 7], [17, 7], [12, 12], [7, 17], [17, 17]],
-    6: [[7, 6], [17, 6], [7, 12], [17, 12], [7, 18], [17, 18]],
-  };
-
-  return (
-    <button onClick={roll} title="roll to a random chapter" style={{
-      display: "flex", alignItems: "center", gap: 8,
-      padding: "6px 10px 6px 7px", cursor: rolling ? "wait" : "pointer",
-      background: theme.accent, color: theme.paper,
-      border: `1.5px solid ${theme.ink}`,
-      fontFamily: typeset.mono, fontSize: 10, letterSpacing: 1.4,
-      textTransform: "uppercase", borderRadius: 2, flexShrink: 0
-    }}>
-      <svg width={size * 0.6} height={size * 0.6} viewBox="0 0 24 24"
-        style={{ transition: "transform .12s ease", transform: rolling ? `rotate(${face * 60}deg)` : "rotate(0deg)" }}>
-        <rect x="2" y="2" width="20" height="20" rx="3" fill={theme.ink} stroke={theme.paper} strokeWidth="0.8" />
-        {FACES[face].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={2.2} fill={theme.paper} />)}
-      </svg>
-      {label && <span>{rolling ? "rolling‚Ä¶" : "roll"}</span>}
-    </button>
-  );
-}
-
-function SiteHeader({ theme, typeset, paletteKey, onPalette, onJump }) {
-  const keys = Object.keys(window.THEMES);
-  const [openMenu, setOpenMenu] = useState(false);
-  const sectionIds = ["moments", "career", "projects", "education", "loves", "values", "hobbies", "failures", "now", "guestbook"];
-
-  return (
-    <header style={{
-      position: "sticky", top: 0, zIndex: 50,
-      backdropFilter: "blur(10px)",
-      background: `${theme.paper}ee`,
-      borderBottom: `1px solid ${theme.edge}`
-    }}>
-      <div className="site-wrap" style={{
-        display: "flex", alignItems: "center", gap: 20,
-        padding: "14px 28px", maxWidth: 1280, margin: "0 auto"
-      }}>
-        <a href="#top" style={{
-          fontFamily: typeset.display, fontSize: 22, color: theme.ink,
-          textDecoration: "none", fontWeight: 600, letterSpacing: -0.3, flexShrink: 0
-        }}>
-          jenn<span style={{ color: theme.accent }}>.</span>
-        </a>
-
-        <nav className="site-nav" style={{ display: "flex", gap: 18, marginLeft: 12, flex: 1, flexWrap: "wrap" }}>
-          {[
-            { id: "moments", label: "moments" },
-            { id: "career", label: "career" },
-            { id: "projects", label: "projects" },
-            { id: "loves", label: "loves" },
-            { id: "now", label: "now" },
-            { id: "guestbook", label: "guestbook" },
-          ].map((item) =>
-            <a key={item.id} href={`#${item.id}`}
-              onClick={(e) => { e.preventDefault(); onJump(item.id); }}
-              style={{
-                fontFamily: typeset.mono, fontSize: 11, letterSpacing: 1.4,
-                textTransform: "uppercase", color: theme.mute,
-                textDecoration: "none", padding: "4px 0"
-              }}>{item.label}</a>
-          )}
-        </nav>
-
-        <div style={{ position: "relative", flexShrink: 0 }}>
-          <button onClick={() => setOpenMenu((v) => !v)} style={{
-            display: "flex", alignItems: "center", gap: 8,
-            padding: "6px 10px", cursor: "pointer",
-            background: theme.paperDeep, border: `1px solid ${theme.edge}`,
-            fontFamily: typeset.mono, fontSize: 10, letterSpacing: 1.4,
-            textTransform: "uppercase", color: theme.ink, borderRadius: 2
-          }}>
-            <span style={{ display: "flex", gap: 2 }}>
-              {window.THEMES[paletteKey].swatch.slice(0, 3).map((c, i) =>
-                <span key={i} style={{ width: 10, height: 10, background: c, borderRadius: 1 }} />
-              )}
-            </span>
-            {paletteKey}
-            <span style={{ opacity: 0.5 }}>‚ñæ</span>
-          </button>
-          {openMenu &&
-            <div style={{
-              position: "absolute", top: "calc(100% + 6px)", right: 0,
-              background: theme.paper, border: `1px solid ${theme.edge}`,
-              boxShadow: "0 10px 30px rgba(0,0,0,0.12)",
-              padding: 6, display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)",
-              gap: 4, minWidth: 240, zIndex: 60, borderRadius: 2
-            }}>
-              {keys.map((k) => {
-                const th = window.THEMES[k];
-                const on = k === paletteKey;
-                return (
-                  <button key={k} onClick={() => { onPalette(k); setOpenMenu(false); }} style={{
-                    display: "flex", alignItems: "center", gap: 8,
-                    padding: "7px 10px", cursor: "pointer",
-                    background: on ? theme.ink : "transparent",
-                    color: on ? theme.paper : theme.ink,
-                    border: "none", textAlign: "left",
-                    fontFamily: typeset.mono, fontSize: 10,
-                    letterSpacing: 1.2, textTransform: "uppercase"
-                  }}>
-                    <span style={{ display: "flex", gap: 1, flexShrink: 0 }}>
-                      {th.swatch.slice(0, 3).map((c, i) =>
-                        <span key={i} style={{ width: 9, height: 9, background: c, borderRadius: 1 }} />
-                      )}
-                    </span>
-                    {th.name}
-                  </button>
-                );
-              })}
-            </div>
-          }
-        </div>
-      </div>
-    </header>
-  );
-}
-
-function Hero({ theme, typeset, onJump }) {
-  const sectionIds = ["moments", "career", "projects", "education", "loves", "values", "hobbies", "failures", "now", "guestbook"];
-  return (
-    <section id="top" style={{
-      position: "relative",
-      maxWidth: 1280, margin: "0 auto", padding: "80px 28px 60px"
-    }}>
-      <div style={{
-        display: "grid", gridTemplateColumns: "minmax(0, 1.4fr) minmax(0, 1fr)",
-        gap: 60, alignItems: "end"
-      }} className="hero-grid">
-        <div>
-          <div style={{
-            fontFamily: typeset.mono, fontSize: 11, letterSpacing: 3,
-            textTransform: "uppercase", color: theme.mute, marginBottom: 28
-          }}>A PORTFOLIO OF MY WORLD ¬∑ IN SIX CHAPTERS</div>
-
-          <h1 style={{
-            fontFamily: typeset.display, fontSize: "clamp(56px, 9vw, 124px)",
-            lineHeight: 1.04, letterSpacing: -0.03, margin: 0, paddingBottom: 8,
-            color: theme.ink, fontWeight: 500
-          }}>
-            Hi, I'm <em style={{ fontStyle: typeset.italic ? "italic" : "normal", color: theme.accent, fontWeight: 500 }}>Jenn</em>.
-          </h1>
-
-          <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 28, flexWrap: "wrap" }}>
-            <DiceButton theme={theme} typeset={typeset} onJump={onJump} sections={sectionIds} size={64} label={false} />
-            <span style={{
-              fontFamily: '"JetBrains Mono"', fontSize: 20, color: theme.accent,
-              lineHeight: 1, width: 600
-            }}>roll the dice to bring you to a random page</span>
-          </div>
-
-          <p style={{
-            fontFamily: typeset.body, fontSize: "clamp(17px, 1.7vw, 21px)",
-            lineHeight: 1.55, color: theme.ink, marginTop: 36, maxWidth: 560, opacity: 0.85
-          }}>
-            {window.JENN.bio} This is a keepsake ‚Äî equal parts r√©sum√©,
-            scrapbook, and interest tracker. Click around. Sign the guestbook on your way out! :-)
-          </p>
-
-          <div style={{ display: "flex", gap: 14, marginTop: 36, flexWrap: "wrap" }}>
-            <a href="#moments" style={{
-              padding: "12px 22px", background: theme.ink, color: theme.paper,
-              fontFamily: typeset.mono, fontSize: 11, letterSpacing: 2,
-              textTransform: "uppercase", textDecoration: "none",
-              borderRadius: 2, whiteSpace: "nowrap"
-            }}>start the tour ‚Üí</a>
-            <a href="#now" style={{
-              padding: "12px 22px",
-              border: `1.5px solid ${theme.ink}`, color: theme.ink,
-              fontFamily: typeset.mono, fontSize: 11, letterSpacing: 2,
-              textTransform: "uppercase", textDecoration: "none",
-              borderRadius: 2, whiteSpace: "nowrap"
-            }}>what I'm up to now</a>
-          </div>
-        </div>
-
-        <div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
-          <div style={{
-            position: "relative", width: 280, height: 340,
-            background: theme.paper, padding: "16px 16px 50px",
-            boxShadow: "0 14px 40px rgba(0,0,0,0.14), 0 2px 4px rgba(0,0,0,0.06)",
-            transform: "rotate(2.5deg)"
-          }}>
-            <Tape theme={theme} top={-12} left={110} rotate={-6} width={70} />
-            <div style={{
-              width: "100%", aspectRatio: "1 / 1",
-              background: `repeating-linear-gradient(45deg, ${theme.paperDeep}, ${theme.paperDeep} 8px, ${theme.paper} 8px, ${theme.paper} 16px)`,
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontFamily: typeset.mono, fontSize: 10, letterSpacing: 1.5,
-              textTransform: "uppercase", color: theme.mute
-            }}>portrait</div>
-            <div style={{
-              position: "absolute", bottom: 14, left: 0, right: 0,
-              textAlign: "center", fontFamily: typeset.handlike, fontSize: 22, color: theme.ink
-            }}>jenn, ~now</div>
-          </div>
-        </div>
-      </div>
-
-      <div style={{
-        display: "flex", gap: 28, marginTop: 80, flexWrap: "wrap",
-        paddingTop: 24, borderTop: `1px solid ${theme.edge}`
-      }}>
-        {[
-          ["based", "Chicago, IL"],
-          ["day job", "Building ¬∑ Bound"],
-          ["side gig", "Chief of Staff ¬∑ Deep Space Initiative"],
-          ["off-hours", "chess ¬∑ beatles covers ¬∑ space"],
-        ].map(([k, v]) =>
-          <div key={k}>
-            <div style={{ fontFamily: typeset.mono, fontSize: 9, letterSpacing: 2, textTransform: "uppercase", color: theme.mute, marginBottom: 4 }}>{k}</div>
-            <div style={{ fontFamily: typeset.body, fontSize: 14, color: theme.ink }}>{v}</div>
-          </div>
-        )}
-      </div>
-    </section>
-  );
-}
-
-function BoardNav({ theme, typeset, onJump }) {
-  const chapters = window.JENN.chapters;
-  return (
-    <section style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 28px 80px" }}>
-      <div style={{ fontFamily: typeset.mono, fontSize: 10, letterSpacing: 3, textTransform: "uppercase", color: theme.mute, marginBottom: 14 }}>the board</div>
-      <h2 style={{ fontFamily: typeset.display, fontSize: "clamp(32px, 4.5vw, 52px)", margin: "0 0 32px", color: theme.ink, fontWeight: 500, letterSpacing: -0.02 }}>Six spaces. Pick a square.</h2>
-
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 14 }} className="board-grid">
-        {chapters.map((c, i) => {
-          const isAccent = i % 3 === 0;
-          return (
-            <button key={c.key} onClick={() => onJump(c.key)} style={{
-              position: "relative", textAlign: "left", cursor: "pointer",
-              minHeight: 200, padding: 18,
-              background: isAccent ? theme.accent : theme.paper,
-              color: isAccent ? theme.paper : theme.ink,
-              border: `2px solid ${theme.ink}`,
-              fontFamily: typeset.body,
-              display: "flex", flexDirection: "column", justifyContent: "space-between",
-              transition: "transform .12s ease"
-            }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = "translate(-2px, -2px)"}
-              onMouseLeave={(e) => e.currentTarget.style.transform = "translate(0, 0)"}>
-              <div style={{ fontFamily: typeset.mono, fontSize: 10, letterSpacing: 2, opacity: 0.65, textTransform: "uppercase" }}>0{i + 1} / 06</div>
-              <div>
-                <div style={{ fontFamily: typeset.display, fontSize: 22, lineHeight: 1.05, marginBottom: 6, fontWeight: 500 }}>{c.title}</div>
-                <div style={{ fontFamily: typeset.handlike, fontSize: 18, opacity: 0.8 }}>{c.kicker}</div>
-              </div>
-            </button>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
-function ChapterSection({ chapter, idx, theme, typeset }) {
-  const flip = idx % 2 === 1;
-  return (
-    <section id={chapter.key} style={{
-      position: "relative",
-      maxWidth: 1280, margin: "0 auto", padding: "60px 28px",
-      borderTop: `1px solid ${theme.edge}`
-    }}>
-      <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 220px) minmax(0, 1fr)", gap: 48 }} className="chapter-grid">
-        <div style={{ position: "sticky", top: 80, alignSelf: "start" }}>
-          <div style={{ fontFamily: typeset.mono, fontSize: 10, letterSpacing: 3, textTransform: "uppercase", color: theme.mute, marginBottom: 10 }}>chapter 0{idx + 1}</div>
-          <h2 style={{ fontFamily: typeset.display, fontSize: 40, margin: "0 0 10px", color: theme.ink, fontWeight: 500, lineHeight: 1, letterSpacing: -0.01 }}>{chapter.title}</h2>
-          <div style={{ fontFamily: typeset.handlike, fontSize: 22, color: theme.accent }}>{chapter.kicker}</div>
-
-          <div style={{
-            marginTop: 24, position: "relative", width: 200,
-            background: theme.paper, padding: "10px 10px 30px",
-            boxShadow: "0 10px 24px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.05)",
-            transform: `rotate(${flip ? 1.8 : -1.8}deg)`
-          }}>
-            <Tape theme={theme} top={-10} left={70} rotate={flip ? 4 : -4} width={60} />
-            <div style={{
-              width: "100%", aspectRatio: "1 / 1",
-              background: `repeating-linear-gradient(${flip ? 135 : 45}deg, ${theme.paperDeep}, ${theme.paperDeep} 6px, ${theme.paper} 6px, ${theme.paper} 12px)`,
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontFamily: typeset.mono, fontSize: 9, letterSpacing: 1.5,
-              textTransform: "uppercase", color: theme.mute
-            }}>{chapter.key} photo</div>
-            <div style={{ position: "absolute", bottom: 8, left: 0, right: 0, textAlign: "center", fontFamily: typeset.handlike, fontSize: 16, color: theme.ink }}>{chapter.kicker}</div>
-          </div>
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-          {chapter.items.map((it, i) =>
-            <div key={i} style={{
-              display: "grid", gridTemplateColumns: "100px minmax(0, 1fr)",
-              gap: 24, padding: "22px 0",
-              borderBottom: i < chapter.items.length - 1 ? `1px dashed ${theme.edge}` : "none"
-            }} className="chapter-item">
-              <div style={{ fontFamily: typeset.mono, fontSize: 11, letterSpacing: 1.6, textTransform: "uppercase", color: theme.accent, paddingTop: 6 }}>{it.year}</div>
-              <div>
-                <h3 style={{ fontFamily: typeset.display, fontSize: 24, margin: "0 0 8px", color: theme.ink, fontWeight: 500, letterSpacing: -0.01 }}>{it.h}</h3>
-                <p style={{ fontFamily: typeset.body, fontSize: 16, lineHeight: 1.6, color: theme.ink, opacity: 0.82, margin: 0, maxWidth: 620 }}>{it.body}</p>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Stars({ value, theme }) {
-  if (!value) return (
-    <span style={{ fontFamily: '"JetBrains Mono"', fontSize: 11, color: theme.mute, letterSpacing: 1, lineHeight: 1 }}>reading</span>
-  );
-  return (
-    <span style={{ letterSpacing: 1, fontSize: 13, color: theme.accent, lineHeight: 1 }} aria-label={`${value} of 5`}>
-      {"‚òÖ".repeat(value)}<span style={{ color: theme.edge }}>{"‚òÖ".repeat(5 - value)}</span>
-    </span>
-  );
-}
-
-function LovesSection({ chapter, idx, theme, typeset }) {
-  const [openKey, setOpenKey] = useState(chapter.items[0]?.year);
-
-  return (
-    <section id={chapter.key} style={{
-      position: "relative", maxWidth: 1280, margin: "0 auto", padding: "60px 28px",
-      borderTop: `1px solid ${theme.edge}`
-    }}>
-      <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 220px) minmax(0, 1fr)", gap: 48 }} className="chapter-grid">
-        <div style={{ position: "sticky", top: 80, alignSelf: "start" }}>
-          <div style={{ fontFamily: typeset.mono, fontSize: 10, letterSpacing: 3, textTransform: "uppercase", color: theme.mute, marginBottom: 10 }}>chapter 0{idx + 1}</div>
-          <h2 style={{ fontFamily: typeset.display, fontSize: 40, margin: "0 0 10px", color: theme.ink, fontWeight: 500, lineHeight: 1, letterSpacing: -0.01 }}>{chapter.title}</h2>
-          <div style={{ fontFamily: typeset.handlike, fontSize: 22, color: theme.accent }}>{chapter.kicker}</div>
-          <p style={{ marginTop: 16, fontFamily: typeset.body, fontSize: 14, color: theme.ink, opacity: 0.7, lineHeight: 1.55, maxWidth: 200 }}>Tap a category to flip it open.</p>
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {chapter.items.map((it) => {
-            const isOpen = openKey === it.year;
-            return (
-              <div key={it.year} style={{
-                background: theme.paper,
-                border: `1.5px solid ${isOpen ? theme.ink : theme.edge}`,
-                transition: "border-color .15s ease"
-              }}>
-                <button onClick={() => setOpenKey(isOpen ? null : it.year)} style={{
-                  width: "100%", textAlign: "left", cursor: "pointer",
-                  background: "transparent", border: "none", padding: "20px 24px",
-                  display: "grid", gridTemplateColumns: "100px minmax(0, 1fr) auto",
-                  gap: 24, alignItems: "center"
-                }}>
-                  <div style={{ fontFamily: typeset.mono, fontSize: 11, letterSpacing: 1.6, textTransform: "uppercase", color: theme.accent }}>{it.year}</div>
-                  <div>
-                    <div style={{ fontFamily: typeset.display, fontSize: 22, color: theme.ink, fontWeight: 500, letterSpacing: -0.01, lineHeight: 1.2 }}>{it.h}</div>
-                    {!isOpen && <div style={{ fontFamily: typeset.body, fontSize: 14, color: theme.ink, opacity: 0.7, marginTop: 4 }}>{it.body}</div>}
-                  </div>
-                  <div style={{ fontFamily: typeset.mono, fontSize: 11, color: theme.mute, letterSpacing: 1.4, textTransform: "uppercase" }}>
-                    {it.list ? `${it.list.length} item${it.list.length !== 1 ? "s" : ""} ${isOpen ? "‚ñæ" : "‚ñ∏"}` : ""}
-                  </div>
-                </button>
-
-                {isOpen && it.list &&
-                  <div style={{ padding: "0 24px 24px", borderTop: `1px dashed ${theme.edge}` }}>
-                    <p style={{ fontFamily: typeset.body, fontSize: 15, lineHeight: 1.55, color: theme.ink, opacity: 0.78, margin: "16px 0 18px", maxWidth: 580 }}>{it.body}</p>
-                    <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column" }}>
-                      {it.list.map((row, i) =>
-                        <li key={i} style={{
-                          display: "grid", gridTemplateColumns: "minmax(0, 1.4fr) 90px minmax(0, 1.6fr)",
-                          gap: 18, alignItems: "baseline", padding: "12px 0",
-                          borderBottom: i < it.list.length - 1 ? `1px dashed ${theme.edge}` : "none"
-                        }} className="loves-row">
-                          <div style={{ fontFamily: typeset.body, fontSize: 16, color: theme.ink, fontWeight: 500, lineHeight: 1.3 }}>{row.title}</div>
-                          <div><Stars value={row.rating} theme={theme} /></div>
-                          <div style={{ fontFamily: typeset.body, fontSize: 14, color: theme.ink, opacity: 0.72, lineHeight: 1.5, fontStyle: typeset.italic ? "italic" : "normal" }}>{row.note}</div>
-                        </li>
-                      )}
-                    </ul>
-                  </div>
-                }
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function NowSection({ theme, typeset }) {
-  const [tick, setTick] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => setTick((t) => t + 1), 60_000);
-    return () => clearInterval(id);
-  }, []);
-  const NowDate = window.NowDate;
-  const time = useMemo(() => {
-    const d = new Date();
-    return d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
-  }, [tick]);
-
-  return (
-    <section id="now" style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 28px", borderTop: `1px solid ${theme.edge}` }}>
-      <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 220px) minmax(0, 1fr)", gap: 48 }} className="chapter-grid">
-        <div>
-          <div style={{ fontFamily: typeset.mono, fontSize: 10, letterSpacing: 3, textTransform: "uppercase", color: theme.mute, marginBottom: 10 }}>live</div>
-          <h2 style={{ fontFamily: typeset.display, fontSize: 40, margin: "0 0 10px", color: theme.ink, fontWeight: 500, letterSpacing: -0.01 }}>Now</h2>
-          <div style={{ fontFamily: typeset.handlike, fontSize: 22, color: theme.accent, marginBottom: 12 }}>updated as I live it</div>
-          <div style={{ fontFamily: typeset.mono, fontSize: 11, color: theme.mute, letterSpacing: 1.4 }}>
-            <NowDate /> ¬∑ {time} CT
-          </div>
-        </div>
-
-        <div style={{ background: theme.paper, border: `2px solid ${theme.ink}`, padding: "28px 32px", position: "relative" }}>
-          <Stamp theme={theme} typeset={typeset} label="this week" style={{ position: "absolute", top: -16, right: 24, background: theme.paper }} />
-          <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 14 }}>
-            {window.JENN.now.map((row, i) =>
-              <li key={i} style={{
-                display: "grid", gridTemplateColumns: "100px minmax(0, 1fr)",
-                gap: 18, alignItems: "baseline", paddingBottom: 14,
-                borderBottom: i < window.JENN.now.length - 1 ? `1px dashed ${theme.edge}` : "none"
-              }}>
-                <span style={{ fontFamily: typeset.mono, fontSize: 11, letterSpacing: 1.6, textTransform: "uppercase", color: theme.accent }}>{row.label}</span>
-                <span style={{ fontFamily: typeset.body, fontSize: 17, color: theme.ink, lineHeight: 1.4 }}>{row.value}</span>
-              </li>
-            )}
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function GuestbookSection({ theme, typeset }) {
-  const KEY = "jenn-guestbook-v1";
-  const [entries, setEntries] = useState(() => {
-    try { return JSON.parse(localStorage.getItem(KEY)) || window.JENN.guestbook; }
-    catch { return window.JENN.guestbook; }
-  });
-  const [from, setFrom] = useState("");
-  const [note, setNote] = useState("");
-
-  function submit(e) {
-    e.preventDefault();
-    if (!from.trim() || !note.trim()) return;
-    const next = [
-      { from: from.trim(), note: note.trim(), when: new Date().toLocaleDateString("en-US", { month: "short", year: "2-digit" }).replace(" ", " '") },
-      ...entries
-    ].slice(0, 30);
-    setEntries(next);
-    localStorage.setItem(KEY, JSON.stringify(next));
-    setFrom(""); setNote("");
-  }
-
-  return (
-    <section id="guestbook" style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 28px", borderTop: `1px solid ${theme.edge}` }}>
-      <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 220px) minmax(0, 1fr)", gap: 48 }} className="chapter-grid">
-        <div>
-          <div style={{ fontFamily: typeset.mono, fontSize: 10, letterSpacing: 3, textTransform: "uppercase", color: theme.mute, marginBottom: 10 }}>sign in</div>
-          <h2 style={{ fontFamily: typeset.display, fontSize: 40, margin: "0 0 10px", color: theme.ink, fontWeight: 500, letterSpacing: -0.01 }}>Guestbook</h2>
-          <div style={{ fontFamily: typeset.handlike, fontSize: 22, color: theme.accent, marginBottom: 16 }}>leave a note, take a memory</div>
-          <p style={{ fontFamily: typeset.body, fontSize: 14, color: theme.ink, opacity: 0.7, lineHeight: 1.55, margin: 0, maxWidth: 200 }}>Stays in your browser. I won't see it unless you tell me.</p>
-        </div>
-
-        <div>
-          <form onSubmit={submit} style={{
-            background: theme.paper, border: `2px solid ${theme.ink}`,
-            padding: 22, marginBottom: 24, display: "grid", gap: 12
-          }}>
-            <input value={from} onChange={(e) => setFrom(e.target.value)} placeholder="your name" style={{
-              background: "transparent", border: "none", borderBottom: `1.5px solid ${theme.edge}`,
-              padding: "8px 4px", fontFamily: typeset.body, fontSize: 16, color: theme.ink, outline: "none"
-            }} />
-            <textarea value={note} onChange={(e) => setNote(e.target.value)}
-              placeholder="say hi, leave a memory, drop a recommendation‚Ä¶" rows={3} style={{
-                background: "transparent", border: "none", borderBottom: `1.5px solid ${theme.edge}`,
-                padding: "8px 4px", fontFamily: typeset.body, fontSize: 16, color: theme.ink, outline: "none", resize: "vertical"
-              }} />
-            <div style={{ display: "flex", justifyContent: "flex-end" }}>
-              <button type="submit" style={{
-                padding: "10px 20px", background: theme.ink, color: theme.paper,
-                border: "none", cursor: "pointer",
-                fontFamily: typeset.mono, fontSize: 11, letterSpacing: 2, textTransform: "uppercase"
-              }}>sign ‚Üí</button>
-            </div>
-          </form>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 14 }}>
-            {entries.map((e, i) =>
-              <div key={i} style={{
-                background: theme.paper, padding: "16px 18px 18px",
-                border: `1px solid ${theme.edge}`, position: "relative",
-                transform: `rotate(${(i % 3 - 1) * 0.6}deg)`,
-                boxShadow: "0 4px 14px rgba(0,0,0,0.06)"
-              }}>
-                <p style={{ fontFamily: typeset.handlike, fontSize: 19, color: theme.ink, margin: 0, lineHeight: 1.35 }}>"{e.note}"</p>
-                <div style={{
-                  marginTop: 10, display: "flex", justifyContent: "space-between",
-                  fontFamily: typeset.mono, fontSize: 10, letterSpacing: 1.4,
-                  textTransform: "uppercase", color: theme.mute
-                }}>
-                  <span>‚Äî {e.from}</span><span>{e.when}</span>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function SiteFooter({ theme, typeset }) {
-  return (
-    <footer style={{
-      maxWidth: 1280, margin: "0 auto", padding: "60px 28px 80px",
-      borderTop: `1px solid ${theme.edge}`,
-      display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "space-between", alignItems: "flex-end"
-    }}>
-      <div>
-        <div style={{ fontFamily: typeset.display, fontSize: 32, color: theme.ink, fontWeight: 500, letterSpacing: -0.02 }}>Thanks for stopping by.</div>
-        <div style={{ fontFamily: typeset.handlike, fontSize: 22, color: theme.accent, marginTop: 4 }}>‚Äî jenn</div>
-      </div>
-      <div style={{
-        fontFamily: typeset.mono, fontSize: 10, letterSpacing: 2,
-        textTransform: "uppercase", color: theme.mute, textAlign: "right", lineHeight: 1.9
-      }}>
-        <a href={`mailto:${window.JENN.email}`} style={{ color: theme.ink, textDecoration: "none", borderBottom: `1px solid ${theme.edge}` }}>
-          {window.JENN.email}
-        </a><br />
-        <a href={`https://${window.JENN.linkedin}`} target="_blank" rel="noreferrer" style={{ color: theme.ink, textDecoration: "none", borderBottom: `1px solid ${theme.edge}` }}>
-          {window.JENN.linkedin}
-        </a><br />
-        <span style={{ opacity: 0.7 }}>built with care ¬∑ chicago</span>
-      </div>
-    </footer>
-  );
-}
-
-function Site({ theme, typeset, texture, paletteKey, onPalette }) {
-  function jump(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 64;
-    window.scrollTo({ top, behavior: "smooth" });
-  }
-  const bg = window.bgTexture(texture, theme.bg, theme.ink);
-
-  return (
-    <div style={{ ...bg, color: theme.ink, minHeight: "100vh" }}>
-      <SiteHeader theme={theme} typeset={typeset} paletteKey={paletteKey} onPalette={onPalette} onJump={jump} />
-      <Hero theme={theme} typeset={typeset} onJump={jump} />
-      <BoardNav theme={theme} typeset={typeset} onJump={jump} />
-      {window.JENN.chapters.map((c, i) =>
-        c.key === "loves"
-          ? <LovesSection key={c.key} chapter={c} idx={i} theme={theme} typeset={typeset} />
-          : <ChapterSection key={c.key} chapter={c} idx={i} theme={theme} typeset={typeset} />
-      )}
-      <NowSection theme={theme} typeset={typeset} />
-      <GuestbookSection theme={theme} typeset={typeset} />
-      <SiteFooter theme={theme} typeset={typeset} />
-    </div>
-  );
-}
-
-window.Site = Site;
-</script>
-
-<!-- ‚îÄ‚îÄ app bootstrap ‚îÄ‚îÄ -->
-<script type="text/babel">
-const TWEAK_DEFAULTS = { "palette": "fig", "type": "editorial", "texture": "paper" };
-
-function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-  const theme = window.THEMES[t.palette] || window.THEMES.fig;
-  const typeset = window.TYPESETS[t.type] || window.TYPESETS.editorial;
-
-  return (
-    <>
-      <Site
-        theme={theme} typeset={typeset} texture={t.texture}
-        paletteKey={t.palette}
-        onPalette={(k) => setTweak('palette', k)}
-      />
-      <TweaksPanel title="Tweaks">
-        <TweakSection label="Color palette">
-          <TweakColor
-            label="Mood"
-            value={window.THEMES[t.palette]?.swatch || window.THEMES.fig.swatch}
-            options={Object.values(window.THEMES).map(th => th.swatch)}
-            onChange={(arr) => {
-              const k = Object.keys(window.THEMES).find(k => window.THEMES[k].swatch.join() === arr.join());
-              if (k) setTweak('palette', k);
-            }}
-          />
-          <div style={{ fontSize: 10, color: 'rgba(41,38,27,0.55)', marginTop: -2, fontFamily: 'ui-sans-serif, system-ui' }}>
-            {window.THEMES[t.palette]?.name || 'fig'}
-          </div>
-        </TweakSection>
-        <TweakSection label="Typography">
-          <TweakSelect
-            label="Pairing"
-            value={t.type}
-            options={[
-              { value: 'editorial', label: 'Editorial ‚Äî Lora + Inter Tight' },
-              { value: 'hand',      label: 'Hand-drawn ‚Äî Caveat + Crimson' },
-              { value: 'archive',   label: 'Archive ‚Äî Special Elite + Fraunces' },
-              { value: 'modern',    label: 'Modern ‚Äî Instrument + JetBrains' },
+              { value: 'editorial', label: 'Editorial — Lora + Inter Tight' },
+              { value: 'hand',      label: 'Hand-drawn — Caveat + Crimson' },
+              { value: 'archive',   label: 'Archive — Special Elite + Fraunces' },
+              { value: 'modern',    label: 'Modern — Instrument + JetBrains' },
             ]}
             onChange={(v) => setTweak('type', v)}
           />
