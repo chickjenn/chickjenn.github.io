@@ -865,13 +865,15 @@ function ChapterNav({ chapter, theme, typeset, navigate }) {
 
 function HomePage({ theme, typeset, navigate }) {
   const ALL_PAGES = ['moments','career','projects','education','loves','values','notes','now','guestbook'];
+  const [tick, setTick] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setTick(t => t + 1), 60000);
+    return () => clearInterval(id);
+  }, []);
+  const time = useMemo(() => new Date().toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" }), [tick]);
+  const NowDate = window.NowDate;
 
-  const BOARD = [
-    ...window.JENN.chapters,
-    { key: 'notes',     title: 'Field notes',     kicker: 'what i learned today' },
-    { key: 'now',       title: 'Now',              kicker: 'updated as I live it' },
-    { key: 'guestbook', title: 'Guestbook',        kicker: 'leave a note' },
-  ];
+  const BOARD = window.JENN.chapters;
 
   return (
     <>
@@ -880,7 +882,7 @@ function HomePage({ theme, typeset, navigate }) {
         <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.4fr) minmax(0, 1fr)", gap: 60, alignItems: "end" }} className="hero-grid">
           <div>
             <div style={{ fontFamily: typeset.mono, fontSize: 11, letterSpacing: 3, textTransform: "uppercase", color: theme.mute, marginBottom: 28 }}>
-              A PORTFOLIO OF MY WORLD — NINE PAGES
+              A PORTFOLIO OF MY WORLD — SIX CHAPTERS
             </div>
             <h1 style={{ fontFamily: typeset.display, fontSize: "clamp(56px, 9vw, 124px)", lineHeight: 1.04, letterSpacing: -0.03, margin: 0, paddingBottom: 8, color: theme.ink, fontWeight: 500 }}>
               Hi, I'm <em style={{ fontStyle: typeset.italic ? "italic" : "normal", color: theme.accent, fontWeight: 500 }}>Jenn</em>.
@@ -897,11 +899,21 @@ function HomePage({ theme, typeset, navigate }) {
               <button onClick={() => navigate('now')} style={{ padding: "12px 22px", border: "1.5px solid " + theme.ink, color: theme.ink, fontFamily: typeset.mono, fontSize: 11, letterSpacing: 2, textTransform: "uppercase", background: "none", cursor: "pointer", borderRadius: 2, whiteSpace: "nowrap" }}>what I'm up to now</button>
             </div>
           </div>
-          <div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
-            <div style={{ position: "relative", width: 280, height: 340, background: theme.paper, padding: "16px 16px 50px", boxShadow: "0 14px 40px rgba(0,0,0,0.14), 0 2px 4px rgba(0,0,0,0.06)", transform: "rotate(2.5deg)" }}>
-              <Tape theme={theme} top={-12} left={110} rotate={-6} width={70} />
-              <div style={{ width: "100%", aspectRatio: "1 / 1", background: "repeating-linear-gradient(45deg, " + theme.paperDeep + ", " + theme.paperDeep + " 8px, " + theme.paper + " 8px, " + theme.paper + " 16px)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: typeset.mono, fontSize: 10, letterSpacing: 1.5, textTransform: "uppercase", color: theme.mute }}>portrait</div>
-              <div style={{ position: "absolute", bottom: 14, left: 0, right: 0, textAlign: "center", fontFamily: typeset.handlike, fontSize: 22, color: theme.ink }}>jenn, ~now</div>
+          <div style={{ position: "relative" }}>
+            <div style={{ background: theme.paper, border: "2px solid " + theme.ink, padding: "28px 28px 24px", position: "relative" }}>
+              <Stamp theme={theme} typeset={typeset} label="this week" style={{ position: "absolute", top: -16, right: 20, background: theme.paper }} />
+              <div style={{ fontFamily: typeset.mono, fontSize: 10, color: theme.mute, letterSpacing: 1.4, marginBottom: 16 }}><NowDate /> · {time} CT</div>
+              <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 12 }}>
+                {window.JENN.now.map((row, i) =>
+                  <li key={i} style={{ display: "grid", gridTemplateColumns: "90px minmax(0,1fr)", gap: 14, alignItems: "baseline", paddingBottom: 12, borderBottom: i < window.JENN.now.length - 1 ? "1px dashed " + theme.edge : "none" }}>
+                    <span style={{ fontFamily: typeset.mono, fontSize: 10, letterSpacing: 1.4, textTransform: "uppercase", color: theme.accent }}>{row.label}</span>
+                    <span style={{ fontFamily: typeset.body, fontSize: 15, color: theme.ink, lineHeight: 1.4 }}>{row.value}</span>
+                  </li>
+                )}
+              </ul>
+              <button onClick={() => navigate('now')} style={{ marginTop: 18, fontFamily: typeset.mono, fontSize: 10, letterSpacing: 1.4, textTransform: "uppercase", color: theme.mute, background: "none", border: "none", cursor: "pointer", padding: 0 }}>
+                full now page →
+              </button>
             </div>
           </div>
         </div>
@@ -918,7 +930,7 @@ function HomePage({ theme, typeset, navigate }) {
       {/* Board */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 28px 80px" }}>
         <div style={{ fontFamily: typeset.mono, fontSize: 10, letterSpacing: 3, textTransform: "uppercase", color: theme.mute, marginBottom: 14 }}>the board</div>
-        <h2 style={{ fontFamily: typeset.display, fontSize: "clamp(32px, 4.5vw, 52px)", margin: "0 0 32px", color: theme.ink, fontWeight: 500, letterSpacing: -0.02 }}>Nine pages. Pick a square.</h2>
+        <h2 style={{ fontFamily: typeset.display, fontSize: "clamp(32px, 4.5vw, 52px)", margin: "0 0 32px", color: theme.ink, fontWeight: 500, letterSpacing: -0.02 }}>Six chapters. Pick a square.</h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 14 }} className="board-grid">
           {BOARD.map((c, i) => {
             const isAccent = i % 3 === 0;
@@ -934,7 +946,7 @@ function HomePage({ theme, typeset, navigate }) {
                 onMouseEnter={(e) => e.currentTarget.style.transform = "translate(-2px, -2px)"}
                 onMouseLeave={(e) => e.currentTarget.style.transform = "translate(0, 0)"}>
                 <div style={{ fontFamily: typeset.mono, fontSize: 10, letterSpacing: 2, opacity: 0.6, textTransform: "uppercase" }}>
-                  {String(i + 1).padStart(2, '0')} / 09
+                  {String(i + 1).padStart(2, '0')} / 06
                 </div>
                 <div>
                   <div style={{ fontFamily: typeset.display, fontSize: 22, lineHeight: 1.05, marginBottom: 6, fontWeight: 500 }}>{c.title}</div>
